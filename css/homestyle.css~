@@ -1,0 +1,20 @@
+h1{
+	color: white;
+	font: 40pt helvetica, arial, clean, sans-serif;
+}
+
+a{
+	font: 20pt helvetica, arial, clean, sans-serif;
+	color: white;
+}
+
+body {
+	background-color: #1A1A1A;
+	color: #A1A1A1;
+	font: 13pt helvetica, arial, clean, sans-serif;
+}
+
+hr {
+	color: green;
+	margin-top: 10px;
+}
