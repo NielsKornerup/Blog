@@ -1,1 +1,2 @@
-paginator: 10
+paginate: 10
+destination: ./Blog

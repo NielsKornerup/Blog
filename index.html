@@ -14,10 +14,10 @@ title: The Tesseract
 		</h1>-->
 	</head>
 	<div id="post-list">
-		{% for post in paginator.posts %}
+		{% for post in site.posts %}
 			<div>
 				<span class="post-date">{{ post.date | date_to_long_string }}</span>
-				<h2><a href="{{ site.baseurl }}{{ post.url }} style="color: #FF66FF">{{ post.title }}</a></h2>
+				<h2><a href=".{{ site.baseurl }}{{ post.url }}" style=color: #FF66FF">{{ post.title }}</a></h2>
 				<p class="post-description">{{ post.content | strip_html | truncatewords: 50 }}</p>
 			</div>
 			<br>
