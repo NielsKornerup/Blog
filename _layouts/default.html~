@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title> {{ page.title }} </title>
-		<link rel="stylesheet" type="text/css" href="/css/style.css">
+		<link rel="stylesheet" type="text/css" href= {{site.baseurl}}"/css/style.css">
 		<h1>
 			<center> {{ page.title }} </center>
 			<hr>
@@ -10,7 +10,6 @@
 	</head>
 
 	<body>
-		<img src= {{img}} alt= {{imgalt}} >
 		{{ content }}
 
 	</body>

@@ -6,7 +6,7 @@ title: The Tesseract
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<link rel="stylesheet" type="text/css" href="./css/homestyle.css">
+		<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/homestyle.css">
 		<!--<title> The Tesseract </title>
 		<h1>
 			<center>The Tesseract</center>
@@ -17,7 +17,7 @@ title: The Tesseract
 		{% for post in site.posts %}
 			<div>
 				<span class="post-date">{{ post.date | date_to_long_string }}</span>
-				<h2><a href=".{{ site.baseurl }}{{ post.url }}" style=color: #FF66FF">{{ post.title }}</a></h2>
+				<h2><a href="{{ site.baseurl }}/{{ post.url }}" style=color: #FF66FF">{{ post.title }}</a></h2>
 				<p class="post-description">{{ post.content | strip_html | truncatewords: 50 }}</p>
 			</div>
 			<br>

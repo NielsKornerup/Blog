@@ -1,2 +1,1 @@
-paginate: 10
-destination: ./Blog
+baseurl: /Blgo
