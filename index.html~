@@ -18,7 +18,7 @@ title: The Tesseract
 			<div>
 				<span class="post-date">{{ post.date | date_to_long_string }}</span>
 				<h2><a href="{{ site.baseurl }}{{ post.url }}" style=color: #FF66FF">{{ post.title }}</a></h2>
-				<p class="post-description">{{ post.content | strip_html | truncatewords: 100 }}</p>
+				<p class="post-description">{{ post.intro }}</p>
 			</div>
 			<br>
 		{% endfor %}

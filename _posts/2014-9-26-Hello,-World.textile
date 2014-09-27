@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Hello, World!
-intro: My first post from Jekyll! Learn a little bit about me and this blog.
+excerpt: My first post from Jekyll! Learn a little bit about me and this blog.
 ---
 
 <img src="http://upload.wikimedia.org/wikipedia/commons/5/55/Tesseract.gif" alt="GIF from wikicommons" Hspace="30" float: right>
