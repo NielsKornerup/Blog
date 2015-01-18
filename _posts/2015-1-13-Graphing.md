@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Graphing
-excerpt: I discuss the progress on my natural selection simulator
+excerpt: I discuss the progress on my natural selection simulator.
 ---
 As of my last post, I had completed the basic mechanism for my Natural Selection simulator. Over the break and going into the start of the school year, I did a lot of optimization, and I added a new feature, graphing. My previous attempt to optimize collision detection between producers and herbivores was to divide the screen into a 4 by 4 quadrant, and check for collisions only in this area. As I was not looking ahead, I hard-coded my collision algorithm, which both made it take longer to write, less dynamic, and harder for others to understand. I changed my hard-coded 4 x 4 grid into something that I could scale as large as I wanted to. Taking advantage of this, I replaced the grid with a 100 x 100 one, which greatly reduced the slow runtime on my older computer. After completing this task and fixing the bugs that resulted, I decided to move on to the next thing I wanted to add to the project, graphing.
 
