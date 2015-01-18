@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Nutrients </title>
+		<link rel="stylesheet" type="text/css" href= "/Blog/css/style.css">
+		<h1>
+			<center> Nutrients </center>
+			<hr>
+		</h1>
+	</head>
+
+	<body>
+		<p>In an attempt to prevent population booms of plants in a small area, which not only drives my simulator’s preformance out of control, but also effectivly ends any info you were trying to collect, I implemented a natural check in nutrients. Certan things required for plants to survive are found in the ground (such as fixed nitrogen from bacteria). In reality, this and the limited availibility of sunlight, ontop of the presence of herbivores serves as a check on plant populations. This solution not only fixed the plant density problem, but also added a new varieable that can be logged, namely Nutrient demand.</p>
+
+<p>To implement this, I took my areas array, which I was already using to make my collission detection more efficient, and changed it from storing arrays of plants to storing objects. By changing the arrays to objects, I gained the ability to add a varieable to each area, namely the amount of nutrients present in the soil. To drain nutrients from the soil, I just ran through my producers array and subtracted the nutrient demand of each plant from its coresponding area. If the present nutrients were smaller than the demand, then I deleted the plant. Implementing nutrient renewal was a little bit more complicated than this. I wanted to make it such that nutrients diffused between areas, allowing for a high demand plant to survive if no other plants are nearby. To implement this, on each itteration I changed each square’s nutrient value to a weighted average between that square’s value and the squares arround it. As of right now, this works for all squares except for the edges, which will be the next thing for me to work on.</p>
+
+<p>As of this moment, this update is on github, but not on my webpage, as I want to finish what I started before updating the version on my website. As predicted, this addition reduces the plant population size, which ultamately hurts the herbivore population, so I will also need to add new balances to help the herbivores accomidate. I hope to get these things done by next week, and I feel that this project is reaching its concluison.</p>
+
+
+	</body>
+</html>
