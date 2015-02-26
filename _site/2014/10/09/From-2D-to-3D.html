@@ -1,17 +1,70 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title> Three.js </title>
-		<link rel="stylesheet" type="text/css" href= "/Blog/css/style.css">
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/Blog/logo.png">
+
+    <title>Blog</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/Blog/bootstrapFiles/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/Blog/bootstrapFiles/starter-template.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 		<h1>
 			<center> Three.js </center>
-			<hr>
 		</h1>
-	</head>
+  </head>
 
-	<body>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Projects</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="http://nielskornerup.github.io/">Home</a></li>
+            <li><a href="http://nielskornerup.github.io/projects">Projects</a></li>
+            <li class="active"><a href="#">Blog</a></li>
+            <li><a href="http://github.com/nielskornerup">Github</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+	<p2>
 		<p>Since my last post, I have been working on adding .gitignore files, writing READMEs, and adding licenses to all of my projects. Now that I am done with this somewhat tedious work, I feel that it time to start a new project. So far this school year, I have been working with a 2D graphics system called canvas, and it has worked great for 2D physics; however, I think it would be cool if I could expand my simulators to the third dimension. To do this, I started learning a javascript library called <a href="http://threejs.org/">three.js</a>, which allows you to create 3D graphics, and it doesn’t seem to be very hard to use. Geometric shapes have predefined classes, and you can add textures to objects simply by using a mesh function. Once an object is created, you only need to add it to the scene for it to become visible. You also define a camera, which is the viewing prospective of the 3D world. Moving objects is simply done by preforming transformations on an XYZ coordinate system. As for the physics, vecotrs in othagonal directions can be delt with independently, meaning that I will only need to make minimal changes to my algorithms for my 3D projects. Overall, I am looking forward to using three.js, and I hope to write a simple tutorial for it once I finish learning it myself.</p>
 
+	</p2>
+    </div><!-- /.container -->
 
-	</body>
-</html>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrapFiles/jquery.js"></script>
+    <script src="bootstrapFiles/bootstrap.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrapFiles/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>

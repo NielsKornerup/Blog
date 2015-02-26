@@ -2,13 +2,9 @@
 layout: default
 title: The Tesseract
 ---
-
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/homestyle.css">
-	</head>
-	<div id="post-list">
+<body>
+      <div id="post-list">
 		{% for post in site.posts %}
 			<div>
 				<span class="post-date">{{ post.date | date_to_long_string }}</span>
@@ -17,5 +13,6 @@ title: The Tesseract
 			</div>
 			<br>
 		{% endfor %}
+		</div>
 	</div>
-</html>
+</body></html>

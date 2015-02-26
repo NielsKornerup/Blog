@@ -1,19 +1,72 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title> Collision Detection </title>
-		<link rel="stylesheet" type="text/css" href= "/Blog/css/style.css">
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/Blog/logo.png">
+
+    <title>Blog</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/Blog/bootstrapFiles/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/Blog/bootstrapFiles/starter-template.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 		<h1>
 			<center> Collision Detection </center>
-			<hr>
 		</h1>
-	</head>
+  </head>
 
-	<body>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Projects</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="http://nielskornerup.github.io/">Home</a></li>
+            <li><a href="http://nielskornerup.github.io/projects">Projects</a></li>
+            <li class="active"><a href="#">Blog</a></li>
+            <li><a href="http://github.com/nielskornerup">Github</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+	<p2>
 		<p>About three days ago, I decided that it was time for me to start another project, as I have been spending the last couple of weeks improving my older ones. Thinking about different options, I eventually settled on a simulator that would demonstrate the principles of natural selection from a logical point of view. Objects are divided into three types: producers, herbivores, and consumers. Producers require no energy and cannot move. They use pollen to create offspring. Herbivores move around and eat producers, and consumers eat herbivores. The idea is to have different genes within the population (such as reproduction rate, size, metabolism rate, etc), and have inheritance with a small room for mutations. Over time, lifeforms with “bad” genes will be consumed, or starve, and those with “good” genes will be able to pass them on, like Darwin discussed in his on the origin of species. After spending some time on this project, I successfully got plant reproduction working; however, in order to test for collisions between pollen and plants, I had to compare every pollen grain to every plant in each frame. Combined with the fact that I am using a five year old computer, this made the rendering speed very slow, and the animation choppy. To fix this, I figured out how to optimize collision detection.</p>
 
 <p>The simplest way to do collision detection is to check all objects against all objects, but this has a run time of O(nk) where n and k are the two numbers of objects in question. Sadly, from a notation perspective (and to the best of my limited knowledge), this is the most efficient possible time to do such calculations. Despite this, there is no point in checking if objects on the opposite sides of the screen collide in each frame, as there is no way they could travel such a distance in such a short time. Using this, I can optimize my collision detection via <a href="https://en.wikipedia.org/wiki/Minimum_bounding_box">bounding boxes</a>. By dividing the screen up into smaller parts, and then determining which part an object could collide with the selected one in, we can save the redundancy of checking if particles on opposite sides of the screen are touching. Despite not actually causing an improvement in algorithm efficiency (it is still O(nk) in worst case), this process optimized my code, allowing for my computer to handle larger numbers of potential collisions. If you want to check out my code, it is on <a href="https://github.com/NielsKornerup/selection">Github</a>. I apologize that it is currently a little bit unreadable, but I plan to work on that in the near future. I hope to give you another update once this project is closer to completion.</p>
 
+	</p2>
+    </div><!-- /.container -->
 
-	</body>
-</html>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrapFiles/jquery.js"></script>
+    <script src="bootstrapFiles/bootstrap.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrapFiles/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>
