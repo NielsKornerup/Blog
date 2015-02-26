@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/Blog/logo.png">
+
+    <title>Blog</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/Blog/bootstrapFiles/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/Blog/bootstrapFiles/starter-template.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<h1>
+			<center> Learning new libraries </center>
+		</h1>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Projects</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="http://nielskornerup.github.io/">Home</a></li>
+            <li><a href="http://nielskornerup.github.io/projects">Projects</a></li>
+            <li class="active"><a href="#">Blog</a></li>
+            <li><a href="http://github.com/nielskornerup">Github</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+	<p2>
+		<p>Learning a new library can often be challenging, especially if it is not very well documented. When I first started with <a href="http://d3js.org/">D3</a>, I had no idea what I was doing. In order to get started, I tried to find a good tutorial for what I wanted to do, but it was to no avail. I finally managed to find someone who had done something like what I wanted to do in D3, so with permission, I borrowed his code. Borrowing code is a good way to help you dive into a new library, as it gives you a working backbone that you can modify, instead of dealing with the overwhelming process of figuring out the library from start to finish. Now that I have worked with this code a little bit, I think I understand how it works, but I am still a little bit uncertain about specific aspects (such as how to load data from an array of JSONs). It may be challenging enough to try out one library for the first time, but for this project, I also need to use <a href="http://nodejs.org/">Nodejs</a>, a platform for “easily building fast, scalable network applications.” This is the first project where I have needed to use a server, so I also had to learn a platform for that (nodejs). My project is hosted on Heroku, which fortunately, has a brief tutorial on how to launch a node application on their site. I copied their sample code, and managed to get “Hello, world!” to be displayed at my URL. Since then, I have successfully modified the code so that it will load my aster chart at the URL, but the aster chart is still taking data from my .CSV file instead of a database. At this point, I started working on learning PostgreSQL, as it is a database service that I can host on Heroku without needing to give them a credit card (otherwise, I would still be using Mongodb). After some messing around and reading a lot of <a href="http://www.w3schools.com/">W3 Schools</a>, I managed to insert data into my database. Next, I had to learn the <a href="https://github.com/brianc/node-postgres">pg</a> library so that I could run a query to the database from my server. In order to figure out pg, I once again looked at sample code, copied it, and edited it to fit my needs. Eventually, I got it such that I ran a query to the database to get all the data associated with a specific user, and could print the result. After this, the next step was to get the server and client to talk. I decided that the server should create the client, which would then send the server a user name. The user name would in turn be queried, and then the server would give the client the resulting data. Upon receiving data for its user, the client would create an aster chart using it. So far, I have started coding this using <a href="http://socket.io/">socket.io</a>, from which I borrowed a lot of their code for a simple chartroom, which I plan to implement my own version of at some point. This code is currently not working, but when it is, I will be able to see if I correctly modified my D3 code to work with an array of JSONs, and if it does, this project will almost be done. Learning libraries can be a very tedious thing. I have spent hours browsing through poorly documented APIs, trying to find the correct command to use in order to do what I want. Sometimes, I will be able to find the command, but without a sample implementation, I am not sure how to use it. Borrowing code from others can save yourself hours and headaches, but if it is a substantial amount of code, it is a good idea to ask them for permission first. After finishing this project, I plan on moving back to something more algorithm related, such as code that uses machine learning to tell the difference between images of capital As and capital Bs.</p>
+
+	</p2>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrapFiles/jquery.js"></script>
+    <script src="bootstrapFiles/bootstrap.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrapFiles/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>
