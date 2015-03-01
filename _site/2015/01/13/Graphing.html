@@ -43,7 +43,7 @@
           <ul class="nav navbar-nav">
             <li><a href="http://nielskornerup.github.io/">Home</a></li>
             <li><a href="http://nielskornerup.github.io/projects">Projects</a></li>
-            <li class="active"><a href="#">Blog</a></li>
+            <li class="active"><a href="http://nielskornerup.github.io/Blog">Blog</a></li>
             <li><a href="http://github.com/nielskornerup">Github</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -51,14 +51,14 @@
     </nav>
 
     <div class="container">
-	<p2>
+	<p>
 		<p>As of my last post, I had completed the basic mechanism for my Natural Selection simulator. Over the break and going into the start of the school year, I did a lot of optimization, and I added a new feature, graphing. My previous attempt to optimize collision detection between producers and herbivores was to divide the screen into a 4 by 4 quadrant, and check for collisions only in this area. As I was not looking ahead, I hard-coded my collision algorithm, which both made it take longer to write, less dynamic, and harder for others to understand. I changed my hard-coded 4 x 4 grid into something that I could scale as large as I wanted to. Taking advantage of this, I replaced the grid with a 100 x 100 one, which greatly reduced the slow runtime on my older computer. After completing this task and fixing the bugs that resulted, I decided to move on to the next thing I wanted to add to the project, graphing.</p>
 
 <p>Its one thing to watch a population change over time, but it is entirely different to be able to see these trends. Using my knowledge of HTML and JQuery, I added a selection box to the top of the simulator’s screen that allows the user to choose between variables to log. As of this moment, I have implemented population sizes for the three groups of organisms, and both germination period and pollen period for producers. Using some simple math, I divided the screen up into an x axis that displays time and a y axis that will graph the value of a variable, such that the x axis reaches from the time you start logging to the time you pressed graph and the y axis stretches between the variable’s maximum and minimum values. In the future, I plan to implement more variables, add axes to the graph, and allow a simulation to continue after looking at the graph.</p>
 
 <p>In the future, I plan to expand on my simulator a little bit more and add nutrients to the ground that plants need to stay alive, which will both add a new variable and help solve my present problems with dense plant populations. I am currently unsure how I plan to implement this, but I might use a large matrix to correspond to the nutrients present in different places. I am looking forward to continuing this project, and after finishing it, I am thinking about doing another one with single celled organisms. At some point, I also plan to make a nicer homepage. That is it for this week, and I should give you another status update soon!</p>
 
-	</p2>
+	</p>
     </div><!-- /.container -->
 
 
