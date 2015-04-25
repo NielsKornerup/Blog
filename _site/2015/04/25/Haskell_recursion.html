@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/Blog/logo.png">
+
+    <title>Blog</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/Blog/bootstrapFiles/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/Blog/bootstrapFiles/starter-template.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		<h1>
+			<center> Haskell recursion </center>
+		</h1>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Blog</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="http://nielskornerup.github.io/">Home</a></li>
+            <li><a href="http://nielskornerup.github.io/projects">Projects</a></li>
+            <li class="active"><a href="http://nielskornerup.github.io/Blog">Blog</a></li>
+            <li><a href="http://github.com/nielskornerup">Github</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+	<p>
+		<p>As a functional programing language, Haskell uses functions instead of loops, AKA recursion. If you have not read my <a href="http://theuniverseisahypersphere.blogspot.com/">old posts</a>, recursion is calling a function inside of itself to get a loop like effect. In many programing languages, recursion is more memory intensive and less efficient than using loops, but it creates elegant solutions for challenging problems. Being a mathematics oriented language, it makes sense that Haskell would orient itself around recursion. Normally when implementing a recursive algorithm, you have a base case, in which a specific value is returned and a general case that will return a function call on a modified input. Here is code that computes the nth Fibonacci number written in Haskell:</p>
+
+<pre><code>fib 1 = 1
+fib 2 = 1
+fib x = fib (x-1) + fib (x-2)
+</code></pre>
+
+<p>As you can see, this function is broken up into three parts, one that tells Haskell what to return when fib is called with the argument 1, another for argument 2, and then what to do if any other input is received. Recursion can also be coded using a case switch system, which will return different arguments depending on the value of a variable. Here is code that recursively calculates factorials written with a switch case:</p>
+
+<pre><code>factorial x =
+	case x of
+	  	1-&gt;1
+	  	_-&gt; x * factorial (x-1)
+</code></pre>
+
+<p>When Haskell reads a function like my fib function that has multiple definitions depending on input (much like a piecewise function in math), it turns it into a case function like my factorial one. Spiting up the function by input is generally easier to read, but it is good to know that you can also get the same result using a switch case. This week, I also got my first introduction to lambda functions, which are functions that can easily be passed as arguments into higher order functions. For example, if I wanted to get the first 100 squares, I could type:</p>
+
+<pre><code>map (\x -&gt; x*x) [1..100]
+</code></pre>
+
+<p>Map is a higher order function that applies a function to every element in a list. The result is the first 100 squares. This has many useful applications, and I am only beginning to look into them. I look forward to updating you on my progress next week!</p>
+
+	</p>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrapFiles/jquery.js"></script>
+    <script src="bootstrapFiles/bootstrap.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrapFiles/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>
